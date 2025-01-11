@@ -26,7 +26,7 @@ Create a shell script that will run automatically at system boot, executing as a
 #### Task 1: Implement Monitoring Tool
 
 1. Declare a file to store output from `grep` commands executed on `top` command output.
-2. Extract essential system information using `grep` and display the output.
+2. Extract essential system information using `awk` and display the output.
 3. Utilize `acpi` command to display battery level and system temperature.
 
 #### Task 2: Implement Automated Background Script
@@ -79,3 +79,8 @@ By following these steps and utilizing Multipass, you'll be able to execute the 
  
 
 ***This project aims to provide a comprehensive system monitoring solution, enabling users to track critical system parameters and receive timely alerts when thresholds are exceeded.*** 
+
+**Projects team**
+1. Derick (abonghoderick@gmail.com)
+2. Micheak (michaelndoh9@gmail.com)
+3. Maxwell(leleivanlele22@gmail.com)
