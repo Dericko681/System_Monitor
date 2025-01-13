@@ -1,5 +1,5 @@
 #!/bin/bash
-LOG_FILE="$1_$(date +%F).log"
+LOG_FILE="sysinfo.log"
 exec &>> >(tee -a "$LOG_FILE")
 # Check memory
 echo "Memory Information:"
