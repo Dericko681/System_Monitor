@@ -1,6 +1,6 @@
 #!/bin/bash
 #Check if acpi command is installed
-if  ! command -v acpi; then
+if  ! command -v acpi &> /dev/null; then
 echo "installing acpi ..."
 sudo apt-get update && sudo apt-get install -y acpi
 else
