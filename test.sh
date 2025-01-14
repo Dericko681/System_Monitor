@@ -18,8 +18,8 @@ echo "Installing Docker inside the Multipass instance..."
 multipass exec $INSTANCE_NAME -- bash -c "sudo apt update && sudo apt install -y docker.io"
 
 #step4: simulating heavy cpu usage
-echo "creating docekr container"
+echo "creating docker container"
 # echo "stressing the cpu with cpustress"
-docker build -t stress-container .
+sudo docker build -t stress-container .
 #stressing system with stress 
-docker run -dit --name stress-test --cpus=2 --memory=2g --memory-swap=2g stress-container
+sudo docker run -dit --name stress-test --cpus=2 --memory=2g --memory-swap=2g stress-container
