@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Check if acpi command is installed
-if ! command -v acpi &> /dev/null; then
-  # Install acpi if it's not available
-  echo "acpi is not installed. Installing..."
-  sudo apt-get update && sudo apt-get install -y acpi
+# Check if acpi command is installed and install if not
+if  ! command -v acpi &> /dev/null; then
+echo "installing acpi"
+sudo apt-get update && sudo apt-get install -y acpi
+else
+echo "acpi command exist"
 fi
 
 LOG_FILE="sysinfo.log"
