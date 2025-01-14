@@ -10,6 +10,7 @@ fi
 
 LOG_FILE="sysinfo.log"
 exec &>> >(tee -a "$LOG_FILE")
+ date
 # Check memory
 echo "Memory Information:"
 echo "$(free )"
