@@ -23,3 +23,4 @@ echo "creating docker container"
 sudo docker build -t stress-container .
 #stressing system with stress 
 sudo docker run -dit --name stress-test --cpus=2 --memory=2g --memory-swap=2g stress-container
+sudo docker exec -it stress-test bash
