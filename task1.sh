@@ -1,4 +1,12 @@
 #!/bin/bash
+
+# Check if acpi command is installed
+if ! command -v acpi &> /dev/null; then
+  # Install acpi if it's not available
+  echo "acpi is not installed. Installing..."
+  sudo apt-get update && sudo apt-get install -y acpi
+fi
+
 LOG_FILE="sysinfo.log"
 exec &>> >(tee -a "$LOG_FILE")
 # Check memory
