@@ -2,7 +2,7 @@
 #Check if acpi command is installed
 if  ! command -v acpi &> /dev/null; then
 echo "installing acpi ..."
-sudo apt-get update && sudo apt-get install -y acpi
+apt-get update && apt-get install -y acpi
 else
 echo "acpi command exist"
 fi
