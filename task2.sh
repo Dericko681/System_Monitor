@@ -1,10 +1,11 @@
-# Check if acpi command is installed
-if ! command -v acpi &> /dev/null; then
-  # Install acpi if it's not available
-  echo "acpi is not installed. Installing..."
-  sudo apt-get update && sudo apt-get install -y acpi
+#!/bin/bash
+#Check if acpi command is installed
+if  ! command -v acpi; then
+echo "installing acpi ..."
+sudo apt-get update && sudo apt-get install -y acpi
+else
+echo "acpi command exist"
 fi
-
 #using grep, awk and sed to fetch some system parameters from the the env variable
 cpu=$(echo "CPU $(LC_ALL=C top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}')% RAM $(free -m | awk '/Mem:/ { printf("%3.1f%%", $3/$2*100) }')" | cut -d' ' -f2 | cut -d'%' -f1)
 echo "%cup: $cpu"
