@@ -16,7 +16,6 @@ echo "Memory Information:"
 echo "$(free )"
 printf "\n"
 printf "\n"
-printf "\n"
 
 # Check battery status    
 echo "Battery Status:"
